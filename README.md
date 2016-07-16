@@ -57,38 +57,38 @@ var authClient = new UberAuthenticationClient(clientId, clientSecret);
 var url = uberClient.GetAuthorizeUrl();
 ```
 ### GetAccessTokenAsync
-[Uber Docs](https://developer.uber.com/v1/auth/)
+[Uber Docs](https://developer.uber.com/docs/rides/authentication)
 ```
 var authClient = new UberAuthenticationClient(clientId, clientSecret);
 var accessToken = await uberClient.GetAccessTokenAsync(code, "http://your-redirect-uri.com");
 ```
 ### RefreshAccessTokenAsync
-[Uber Docs](https://developer.uber.com/v1/auth/)
+[Uber Docs](https://developer.uber.com/docs/rides/authentication)
 ```
 var authClient = new UberAuthenticationClient(clientId, clientSecret);
 var accessToken = await uberClient.RefreshAccessTokenAsync(refreshToken, "http://your-redirect-uri.com");
 ```
 ### RevokeAccessTokenAsync
-[Uber Docs](https://developer.uber.com/v1/auth/)
+[Uber Docs](https://developer.uber.com/docs/rides/authentication)
 ```
 var authClient = new UberAuthenticationClient(clientId, clientSecret);
 var revoked = await uberClient.RevokeAccessTokenAsync(accessToken);
 ```
 ***
 ### GetProductsAsync
-[Uber Docs](https://developer.uber.com/v1/endpoints/#product-types)
+[Uber Docs](https://developer.uber.com/docs/rides/api/v1-products)
 ```
 var uberClient = new UberClient(AccessTokenType.Server, serverToken);
 var products = await uberClient.GetProductsAsync(startLatitude, startLongitude);
 ```
 ### GetPriceEstimateAsync
-[Uber Docs](https://developer.uber.com/v1/endpoints/#price-estimates)
+[Uber Docs](https://developer.uber.com/docs/rides/api/v1-estimates-price)
 ```
 var uberClient = new UberClient(AccessTokenType.Server, serverToken);
 var prices = await uberClient.GetPriceEstimateAsync(startLatitude, startLongitude, endLatitude, endLongitude);
 ```
 ### GetTimeEstimateAsync
-[Uber Docs](https://developer.uber.com/v1/endpoints/#time-estimates)
+[Uber Docs](https://developer.uber.com/docs/rides/api/v1-estimates-time)
 ```
 var uberClient = new UberClient(AccessTokenType.Server, serverToken);
 var times = await uberClient.GetTimeEstimateAsync(startLatitude, startLongitude);
@@ -100,37 +100,37 @@ var uberClient = new UberClient(AccessTokenType.Server, serverToken);
 var promotion = await uberClient.GetPromotionAsync(startLatitude, startLongitude, endLatitude, endLongitude);
 ```
 ### GetUserActivityAsync
-[Uber Docs](https://developer.uber.com/v1/endpoints/#user-activity-v1-1)
+[Uber Docs](https://developer.uber.com/docs/rides/api/v11-history)
 ```
 var uberClient = new UberClient(AccessTokenType.Client, clientToken);
 var userActivity = await uberClient.GetUserActivityAsync(0, 50);
 ```
 ### GetUserProfileAsync
-[Uber Docs](https://developer.uber.com/v1/endpoints/#user-profile)
+[Uber Docs](https://developer.uber.com/docs/rides/api/v1-me)
 ```
 var uberClient = new UberClient(AccessTokenType.Client, clientToken);
 var userProfile = await uberClient.GetUserProfileAsync();
 ```
 ### RequestAsync
-[Uber Docs](https://developer.uber.com/v1/endpoints/#request)
+[Uber Docs](https://developer.uber.com/docs/rides/api/v1-requests)
 ```
 var uberClient = new UberClient(AccessTokenType.Client, clientToken);
 var request = await uberClient.RequestAsync(productId, startLatitude, startLongitude, endLatitude, endLongitude);
 ```
 ### GetRequestDetailsAsync
-[Uber Docs](https://developer.uber.com/v1/endpoints/#request-details)
+[Uber Docs](https://developer.uber.com/docs/rides/api/v1-requests-details)
 ```
 var uberClient = new UberClient(AccessTokenType.Client, clientToken);
 var requestDetails = await uberClient.GetRequestDetailsAsync(requestId);
 ```
 ### GetRequestMapAsync
-[Uber Docs](https://developer.uber.com/v1/endpoints/#request-map)
+[Uber Docs](https://developer.uber.com/docs/rides/api/v1-requests-map)
 ```
 var uberClient = new UberClient(AccessTokenType.Client, clientToken);
 var request = await uberClient.GetRequestMapAsync(requestId);
 ```
 ### CancelRequestAsync
-[Uber Docs](https://developer.uber.com/v1/endpoints/#request-cancel)
+[Uber Docs](https://developer.uber.com/docs/rides/api/v1-requests-cancel)
 ```
 var uberClient = new UberClient(AccessTokenType.Client, clientToken);
 var cancel = await uberClient.CancelRequestAsync(requestId);

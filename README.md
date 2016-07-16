@@ -12,7 +12,7 @@
 
 ## Authentication
 
-When making requests on behalf of a user via OAuth, ensure you understand [scopes.](https://developer.uber.com/v1/api-reference/#scopes)
+When making requests on behalf of a user via OAuth, ensure you understand [scopes.](https://developer.uber.com/docs/rides/scopes)
 
 The following methods can use client OR server authentication:
 
@@ -51,7 +51,7 @@ var accessToken = await authClient.GetAccessTokenAsync(code, "http://your-redire
 ```
 ***
 ### GetAuthorizeUrl
-[Uber Docs](https://developer.uber.com/v1/auth/)
+[Uber Docs](https://developer.uber.com/docs/rides/authentication)
 ```
 var authClient = new UberAuthenticationClient(clientId, clientSecret);
 var url = uberClient.GetAuthorizeUrl();
